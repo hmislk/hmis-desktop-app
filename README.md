@@ -5,12 +5,19 @@ Simple Chrome-based desktop wrapper for HMIS web application.
 ## Features
 
 ✅ **Independent Sessions** - Each launch creates a new session
+
 ✅ **Configurable Print Modes** - Preview, Direct, or Silent printing
+
 ✅ **Cache Control** - Enable/disable for fresh data
+
 ✅ **No Framework Overhead** - Pure Chrome, no Electron/Tauri
+
 ✅ **Multi-Instance Support** - Run unlimited simultaneous sessions
+
 ✅ **Clean Interface** - App mode (no address bar)
+
 ✅ **Lightweight** - Just batch files
+
 
 ## Files
 
@@ -145,10 +152,15 @@ Run `Cleanup-Sessions.bat` to remove old session data.
 ## Advantages Over Electron
 
 ✅ **Native performance** - Uses system Chrome
+
 ✅ **Auto-updates** - Chrome updates automatically
+
 ✅ **Smaller size** - Just KB instead of hundreds of MB
+
 ✅ **No build process** - Deploy immediately
+
 ✅ **Better compatibility** - Full Chrome feature set
+
 
 ## Server URL
 

@@ -152,9 +152,9 @@ Run `Cleanup-Sessions.bat` to remove old session data.
 
 ## Server URL
 
-Current URL: https://stg.carecode.org/coopprod/faces/index1.xhtml
+Default URL: https://your-hmis-server.com/application
 
-To change, edit the `--app=` parameter in the .bat files.
+To change, edit the `HMIS_URL` parameter in `config.bat`.
 
 ## Support
 

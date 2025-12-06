@@ -9,7 +9,7 @@ Edit **`config.bat`** to customize the application behavior.
 ### 1. Application URL
 
 ```batch
-set HMIS_URL=https://stg.carecode.org/coopprod/faces/index1.xhtml
+set HMIS_URL=https://your-hmis-server.com/application
 ```
 
 Change this to your HMIS server URL.

@@ -62,7 +62,7 @@ Edit `config.bat` to customize behavior:
 
 ```batch
 # Application URL
-set HMIS_URL=https://stg.carecode.org/coopprod/faces/index1.xhtml
+set HMIS_URL=https://your-hmis-server.com/application
 
 # Window size (width,height)
 set WINDOW_SIZE=1400,1000

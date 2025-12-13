@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wmic datafile where name=\"D:\\Development\\hmis-desktop\\Launch-HMIS-Fullscreen.bat\" get Version)"
+    ]
+  }
+}

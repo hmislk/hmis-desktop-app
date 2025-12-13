@@ -18,7 +18,7 @@ REM Options: UNIQUE, PERSISTENT, TEMPLATE
 REM   UNIQUE     - Create new session each launch (multi-user, no saved settings)
 REM   PERSISTENT - Use same session (single-user, preserves printer settings, shared login)
 REM   TEMPLATE   - Copy template profile to each session (preserves printer settings, independent logins)
-set SESSION_MODE=TEMPLATE
+set SESSION_MODE=UNIQUE
 
 REM Print Settings
 REM Options: PREVIEW, DIRECT, SILENT

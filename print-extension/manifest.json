@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "HMIS Print Settings",
+  "version": "1.0",
+  "description": "Forces no margins and no headers/footers for printing",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://stg.carecode.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://stg.carecode.org/*"],
+      "js": ["content.js"],
+      "css": ["print.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

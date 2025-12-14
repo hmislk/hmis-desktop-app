@@ -39,7 +39,7 @@ if "%SESSION_MODE%"=="PERSISTENT" (
 
 REM Build Chrome command
 set CHROME_CMD="C:\Program Files\Google\Chrome\Application\chrome.exe"
-set CHROME_ARGS=--app="%HMIS_URL%" --user-data-dir="!USER_DATA_DIR!" --kiosk --no-first-run --no-default-browser-check
+set CHROME_ARGS=--app="%HMIS_URL%" --user-data-dir="!USER_DATA_DIR!" --kiosk --no-first-run --no-default-browser-check --load-extension="%~dp0print-extension"
 
 REM Apply print mode settings
 if "%PRINT_MODE%"=="DIRECT" (
@@ -57,6 +57,19 @@ if "%CACHE_MODE%"=="DISABLED" (
 REM Apply zoom level if set
 if not "%ZOOM_LEVEL%"=="" (
     set CHROME_ARGS=!CHROME_ARGS! --force-device-scale-factor=%ZOOM_LEVEL%
+)
+
+REM Create user data directory if it doesn't exist
+if not exist "!USER_DATA_DIR!" mkdir "!USER_DATA_DIR!"
+
+REM Configure print preferences
+set PREFS_DIR=!USER_DATA_DIR!\Default
+if not exist "!PREFS_DIR!" mkdir "!PREFS_DIR!"
+
+REM Only create Preferences file if it doesn't exist (preserve user settings)
+if not exist "!PREFS_DIR!\Preferences" (
+    echo Creating initial Preferences file with print settings...
+    powershell -Command "$prefs = @{printing=@{print_preview_sticky_settings=@{appState=@{version=2;recentDestinations=@();selectedDestinationId='';marginsType=3;customMargins=@{marginTop=0;marginBottom=0;marginLeft=0;marginRight=0};isHeaderFooterEnabled=$false;isLandscapeEnabled=$false;scaling='100';scalingType=0;isCssBackgroundEnabled=$true}}}}; $prefs | ConvertTo-Json -Depth 10 | Out-File -FilePath '!PREFS_DIR!\Preferences' -Encoding utf8"
 )
 
 REM Launch Chrome

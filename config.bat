@@ -4,7 +4,7 @@ REM HMIS Chrome App Configuration
 REM ========================================
 
 REM Application URL
-set HMIS_URL=https://your-hmis-server.com/application
+set HMIS_URL=https://stg.carecode.org/coopprod/
 
 REM Window Size (width,height)
 set WINDOW_SIZE=1400,1000
@@ -18,14 +18,23 @@ REM Options: UNIQUE, PERSISTENT, TEMPLATE
 REM   UNIQUE     - Create new session each launch (multi-user, no saved settings)
 REM   PERSISTENT - Use same session (single-user, preserves printer settings, shared login)
 REM   TEMPLATE   - Copy template profile to each session (preserves printer settings, independent logins)
-set SESSION_MODE=UNIQUE
+set SESSION_MODE=TEMPLATE
 
 REM Print Settings
 REM Options: PREVIEW, DIRECT, SILENT
 REM   PREVIEW - Show print preview dialog (default Chrome behavior)
 REM   DIRECT  - Print directly without preview
 REM   SILENT  - Print silently to default printer (kiosk mode)
-set PRINT_MODE=SILENT
+set PRINT_MODE=PREVIEW
+
+REM Print Margins (0 = no margins, 1 = default margins, 2 = minimum margins)
+set PRINT_MARGINS=0
+
+REM Print Headers and Footers
+REM Options: ENABLED, DISABLED
+REM   ENABLED  - Print page headers and footers (URL, date, page numbers)
+REM   DISABLED - No headers and footers
+set PRINT_HEADERS=DISABLED
 
 REM Cache Settings
 REM Options: ENABLED, DISABLED

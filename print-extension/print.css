@@ -1,0 +1,42 @@
+@media print {
+  /* Remove all page margins */
+  @page {
+    margin: 0 !important;
+    size: auto;
+  }
+
+  /* Remove body margins and padding */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide common header/footer elements */
+  header,
+  footer,
+  .header,
+  .footer,
+  .page-header,
+  .page-footer,
+  .print-header,
+  .print-footer,
+  nav,
+  .navigation,
+  .navbar,
+  .no-print,
+  [class*="header"],
+  [class*="footer"] {
+    display: none !important;
+  }
+
+  /* Prevent page breaks that create empty pages */
+  * {
+    page-break-after: avoid !important;
+    page-break-before: avoid !important;
+  }
+}

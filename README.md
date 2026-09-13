@@ -418,3 +418,7 @@ For issues or questions:
 - Check the **Troubleshooting** section above
 - Review Chrome command-line switches: https://peter.sh/experiments/chromium-command-line-switches/
 - Verify print-extension files are present and valid
+
+## Licence
+
+This project is licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE).
